@@ -1,8 +1,7 @@
 ---
-title: 'Call to Action: The Ultimate Servival guide'
-description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores.
-category: design
-tags: Design System
+title: 'The Ultimate Guide to Remote Usability Testing'
+description: Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+category: 'engineering'
 date: AUG 19 2020
 readtime: 3 MIN READ
 cover_image: /posts/mustafa.png

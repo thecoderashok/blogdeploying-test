@@ -11,7 +11,7 @@ export default function Header() {
            <div className={style.navBar}>
            <Link href="/" passHref>
            <div className={style.logoContainer}>
-               <Image className={style.Logo} src={Logo} width={65} height={1} alt="logo"/>
+               <Image className={style.Logo} src={Logo} width={65} height={1}/>
                <div className={style.logoName}>
                    <h1>Tasks</h1>
                    <span>To-Do Lists & Reminnders</span>
