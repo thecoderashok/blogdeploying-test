@@ -1,0 +1,211 @@
+/* :root{
+  --tag-main-color: rgb(123, 100, 255);
+} */
+
+.postSection{
+    position: relative;
+    width: 100%;
+    padding: 5% 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .postSectionTitle{
+    position: absolute;
+    top: 2%;
+    padding: 0px 0;
+    left: 1%;
+    font-size: 45px;
+  }
+  
+  .seeAllButton{
+    position: absolute;
+    top: 0%;
+    padding: 20px 30px;
+    right: 14%;
+    font-size: 25px;
+    color: rgb(104, 104, 104);
+  }
+  
+  .postContainer{
+    width: 100%;
+    max-width: 1500px;
+    height: auto;
+    padding: 1.5% 2%;
+    background: rgb(255, 255, 255);
+    margin: 25px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .postTitle{
+    font-size: 40px;
+  }
+  
+  .postDescription{
+    width: 55%;
+    font-size: 20px;
+    color: rgb(102, 102, 102);
+  }
+  
+  .postTag{
+    position: relative;
+    background: rgb(117, 75, 255);
+    padding: .8% 1.2%;
+    width: fit-content;
+    font-size: 20px;
+    border-radius: 320px;
+    text-align: center;
+    color: #fff;
+    
+  }
+  
+  .postBottomContainer{
+    margin-top: 50px;
+    padding: 5px;
+    
+    
+  }
+  
+  .postdate{
+    font-size: 18px;
+    color: rgb(104, 104, 104);
+  }
+  .postReadtime{
+    font-size: 18px;
+    margin: 0 30px;
+    color: rgb(104, 104, 104);
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  /* separate post div  */
+  
+  .PostContentWrapper{
+    position: relative;
+    padding: 5%;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background: rgb(255, 255, 255);
+  }
+  
+  .PostContentWrapper p{
+    font-size: 20px;
+    
+  }
+  
+  .postheader{
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .postContentTitle{
+    font-size: 45px;
+  }
+  .postContentDescription{
+    width: 50%;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+  }
+  
+  .postDateandTime{
+    padding: 2% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-weight: 600;
+  }
+  
+  
+  
+  .postdiv{
+    position: relative;
+    background: rgb(255, 255, 255);
+    width: 80%;
+    margin: auto;
+    font-size: 20px;
+    max-width: 1500px;
+    padding: 5%;
+  }
+  
+  .author_Details_Container{
+    width: 75%;
+    position: relative;
+    height: auto;
+    padding: 2%;
+  }
+  
+  .author_container_title{
+    position: absolute;
+    top: 0;
+    font-size: 35px;
+    left: 3%;
+  }
+  
+  .author_image{
+    position: relative;
+    width: 8%;
+    height: 100%;
+  }
+  
+  .authorCard{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 4% 0;
+    
+  }
+  
+  .author_card_texts{
+    padding: .5% 2%;
+  }
+  
+  .author_name{
+    font-size: 25px;
+    
+  }
+  .author_about{
+    font-size: 22px;
+  }
+  /* .author_description{
+    font-size: 25px;
+  } */
+  
+  .author_Details_Container p{
+    width: 80%;
+    font-size: 22px;
+    line-height: 1.5;
+    color: rgb(68, 68, 68);
+  }
+  .postdiv pre{
+    background: rgb(233, 233, 233);
+    padding: 5%;
+  }
+  
+  .postdiv p{
+    width: 100%;
+  }
+  

@@ -1,6 +1,7 @@
 import Head from 'next/head'
 // import Layout from '../../components/layout'
 // import Date from '../../components/date'
+import styles from '../../styles/Home.module.css'
 import { getAllPostIds, getPostData } from '../../lib/post'
 
 export default function Post({ postData }) {
@@ -11,7 +12,7 @@ export default function Post({ postData }) {
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta property="og:type" content="article" />
-        <meta property="og:title" content={postData.title}/>
+        {/* <meta property="og:title" content={postData.title}/>
         <meta name="twitter:title" content={postData.title}/>
         <meta property="description" content={postData.description}/>
         <meta property="og:description" content={postData.description}/>
@@ -25,15 +26,36 @@ export default function Post({ postData }) {
         <meta property="og:url" content={postData.url} />
         <meta property="og:site_name" content="Here Now Body" />
         <meta name="twitter:site" content="@herenowbody"/>
-        <meta name="twitter:creator" content="@herenowbody"/>      
+        <meta name="twitter:creator" content="@herenowbody"/>       */}
       </Head>
-      {postData.title}
-      <br />
-      {postData.description}
-      <br />
-      {/* <Date dateString={postData.date} /> */}
-      <br />
-      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      <div className={styles.PostContentWrapper}>
+      <div className={styles.postheader}>
+          <h1 className={styles.postContentTitle}>{postData.title}</h1>
+          <p className={styles.postContentDescription}>{postData.description}</p>
+          <div className={styles.postTag}>{postData.tags}</div>
+          <div className={styles.postDateandTime}>
+              <span className={styles.postdate}>{postData.date}</span>
+              <span className={styles.postReadtime}>{postData.readtime}</span>
+          </div>
+          <hr/>
+        </div>
+        <article className={styles.postdiv} dangerouslySetInnerHTML={{ __html: postData.contentHtml }}/>
+        <hr />
+
+        {/* Author details  */}
+        <div className={styles.author_Details_Container}>
+          <h3 className={styles.author_container_title}>Author:</h3>
+            <div className={styles.authorCard}>
+            <img className={styles.author_image} src={postData.authorImage} alt="" />
+              <div className={styles.author_card_texts}>
+                <h3 className={styles.author_name}>{postData.author}</h3>
+                <span className={styles.author_about}>{postData.authorBio}</span>
+
+                <p className={styles.author_description}>{postData.authorDescription}</p>
+              </div>
+            </div>
+        </div>
+   </div>
    </>
   )
 }
