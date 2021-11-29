@@ -25,16 +25,14 @@ export default function Home({ allPostsData }) {
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, category, title, image }) => (
-            <li className={utilStyles.listItem} key={id} style={{ 
-              display: (viewCategory === category || viewCategory === 'all') ? "block":"none"
-            }}>
+            <li className={utilStyles.listItem} key={id} >
             <Link href="/[category]/[id]" as={`/${category}/${id}`} passHref>
               <a>{title}</a>
             </Link>
             <br />
-            <small className={utilStyles.lightText}>
+            {/* <small className={utilStyles.lightText}>
               <Date dateString={date} />
-            </small>
+            </small> */}
             <br />
             <img src={image} alt={id}/>
           </li>
