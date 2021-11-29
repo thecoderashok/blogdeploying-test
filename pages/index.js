@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 // import Layout, { siteTitle } from '../components/layout'
 // import Date from '../components/date'
-import utilStyles from '../styles/utils.module.css'
+import styles from '../styles/Home.module.css'
 import { getSortedPostsData } from '../lib/post'
 
 export default function Home({ allPostsData }) {
@@ -13,26 +13,27 @@ export default function Home({ allPostsData }) {
   return (
    
     <div>
-      <section className={utilStyles.headingMd}>
-      </section>
-      <section>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, category, title, image }) => (
-            <li className={utilStyles.listItem} key={id} >
-            <Link href="/[category]/[id]" as={`/${category}/${id}`} passHref>
-              <a>{title}</a>
-            </Link>
-            <br />
-            {/* <small className={utilStyles.lightText}>
-              <Date dateString={date} />
-            </small> */}
-            <br />
-            <img src={image} alt={id}/>
-          </li>
-          ))}
-        </ul>
-      </section>
+      <section className={styles.postSection}>
+      <h1 className={styles.postSectionTitle}>All Posts</h1>
+      {allPostsData.map(({ id, category,date, tags, description, title, readtime }) => (
+       <li key={id}>
+            <Link href="/[category]/[id]" as={`/${category}/${id}`}>
+               <div className={styles.postContainer}><div>
+            <h2 className={styles.postTitle}>{title}</h2>
+            <p className={styles.postDescription}>{description}</p>
+            <div className={styles.postTag}>{tags}</div>
+            <div className={styles.postBottomContainer}>
+              <span className={styles.postdate}>{date}</span>
+              <span className={styles.postReadtime}>{readtime}</span>
+            </div>
+            
+          </div>
+          
+        </div>
+      </Link>
+    </li>
+      ))}
+    </section>
       </div>
   
   )
