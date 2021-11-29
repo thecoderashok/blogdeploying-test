@@ -8,7 +8,7 @@ export default function Home({ allPostsData}) {
 
   return (
     <div>
-      {allPostsData.map(({ id, category,date, tags, description, title, readtime, cover_image }) => (
+      {allPostsData.map(({ id, category,date, tags, description, title, readtime}) => (
     <section className={styles.postSection} key={id}>
       <h1 className={styles.postSectionTitle}>All Posts</h1>
       {/* <Link href="/Blog/Design"><a className={styles.seeAllButton}>See all</a></Link> */}
@@ -40,7 +40,6 @@ export async function getStaticProps() {
   return {
     props: {
       allPostsData
-     
     }
   }
 }
