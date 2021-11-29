@@ -17,7 +17,7 @@ export default function Home({ allPostsData }) {
       <h1 className={styles.postSectionTitle}>All Posts</h1>
       {allPostsData.map(({ id, category,date, tags, description, title, readtime }) => (
        <li key={id}>
-            <Link href="/[category]/[id]" as={`/${category}/${id}`}>
+            <Link href="/[category]/[id]" as={`/${category}/${id}`} passHref>
                <div className={styles.postContainer}><div>
             <h2 className={styles.postTitle}>{title}</h2>
             <p className={styles.postDescription}>{description}</p>

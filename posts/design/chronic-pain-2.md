@@ -1,6 +1,7 @@
 ---
 title: 'Chronic Pain 2'
 date: '2018-01-02'
+category: 'design'
 description: 'This is my second article about chronic pain.'
 image: '/images/chronic-pain-2.jpg'
 url: 'https://herenowbody.com/chronic-pain/chronic-pain-2'
