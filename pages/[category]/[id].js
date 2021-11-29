@@ -4,7 +4,9 @@ import Head from 'next/head'
 import styles from '../../styles/Home.module.css'
 import { getAllPostIds, getPostData } from '../../lib/post'
 
-export default function Post({ postData }) {
+
+
+export default function Post({ postData}) {
   return (
   <>
       <Head>
@@ -35,6 +37,7 @@ export default function Post({ postData }) {
               <div className={styles.author_card_texts}>
                 <h3 className={styles.author_name}>{postData.author}</h3>
                 <span className={styles.author_about}>{postData.authorBio}</span>
+                
 
                 <p className={styles.author_description}>{postData.authorDescription}</p>
               </div>
