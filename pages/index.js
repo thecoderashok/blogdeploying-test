@@ -4,16 +4,16 @@ import Link from 'next/link'
 // import Layout, { siteTitle } from '../components/layout'
 // import Date from '../components/date'
 import styles from '../styles/Home.module.css'
-import { getDesignPosts, getEngineeringPosts } from '../lib/post'
+import { getSortedPostsData} from '../lib/post'
 
-export default function Home({  engineeringPosts, designPosts }) {
+export default function Home({ allPostsData}) {
   // Delcare what category should be shown
   // const [viewCategory, setCategory] = useState('all');
 
   return (
    
     <div>
-      {/* <section className={styles.postSection}>
+      <section className={styles.postSection}>
       <h1 className={styles.postSectionTitle}>All Posts</h1>
       {allPostsData.map(({ id, category,date, tags, description, title, readtime }) => (
        <li key={id}>
@@ -33,8 +33,8 @@ export default function Home({  engineeringPosts, designPosts }) {
       </Link>
     </li>
       ))}
-    </section> */}
-
+    </section>
+{/* 
       <section className={styles.postSection}>
       <h1 className={styles.postSectionTitle}>Design</h1>
       {designPosts.map(({ id, category,date, tags, description, title, readtime }) => (
@@ -54,10 +54,10 @@ export default function Home({  engineeringPosts, designPosts }) {
     </li>
       ))}
 
-    </section>
+    </section> */}
 
 
-      <section className={styles.postSection}>
+      {/* <section className={styles.postSection}>
       <h1 className={styles.postSectionTitle}>Engineerign</h1>
       {engineeringPosts.map(({ id, category,date, tags, description, title, readtime }) => (
        <li key={id}>
@@ -78,23 +78,21 @@ export default function Home({  engineeringPosts, designPosts }) {
     </li>
       ))}
 
-    </section>
-
-
+    </section> */}
 
       </div>
   )
 }
 
 export async function getStaticProps() {
-  // const allPostsData = getSortedPostsData()
-  const designPosts = getDesignPosts()
-  const engineeringPosts = getEngineeringPosts()
+  const allPostsData = getSortedPostsData()
+  // const designPosts = getDesignPosts()
+  // const engineeringPosts = getEngineeringPosts()
   return {
     props: {
-      // allPostsData,
-      designPosts,
-      engineeringPosts
+      allPostsData
+      // designPosts,
+      // engineeringPosts
     }
   }
 }
