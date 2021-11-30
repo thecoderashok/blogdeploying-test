@@ -4,9 +4,9 @@ import Link from 'next/link'
 // import Layout, { siteTitle } from '../components/layout'
 // import Date from '../components/date'
 import styles from '../styles/Home.module.css'
-import { getSortedPostsData, getDesignPosts} from '../lib/post'
+import { getSortedPostsData} from '../lib/post'
 
-export default function Home({ allPostsData, designPosts}) {
+export default function Home({ allPostsData}) {
   // Delcare what category should be shown
   // const [viewCategory, setCategory] = useState('all');
 
@@ -35,7 +35,7 @@ export default function Home({ allPostsData, designPosts}) {
       ))}
     </section>
 
-      <section className={styles.postSection}>
+      {/* <section className={styles.postSection}>
       <h1 className={styles.postSectionTitle}>Design</h1>
       {designPosts.map(({ id, category,date, tags, description, title, readtime }) => (
        <li key={id}>
@@ -54,7 +54,7 @@ export default function Home({ allPostsData, designPosts}) {
     </li>
       ))}
 
-    </section>
+    </section> */}
 
 
       {/* <section className={styles.postSection}>
@@ -86,12 +86,12 @@ export default function Home({ allPostsData, designPosts}) {
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
-  const designPosts = getDesignPosts()
+  // const designPosts = getDesignPosts()
   // const engineeringPosts = getEngineeringPosts()
   return {
     props: {
-      allPostsData,
-      designPosts
+      allPostsData
+      // designPosts
       // engineeringPosts
     }
   }
