@@ -8,7 +8,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     background: rgb(243, 243, 243); */
     font-family: 'Outfit', sans-serif;
-    background: rgb(243, 243, 243); 
+    background:  #F5F5F7; 
 }
 
 a {
@@ -30,10 +30,12 @@ hr{
 }
 
 li{
+  position: relative;
   padding: 0;
   margin: 0;
-  width: 100%;
+  width: fit-content;
   list-style: none;
+  display: block;
 }
 
 article p{
@@ -44,6 +46,5 @@ article p{
   background: red;
 }
 section{
-  max-width: 1400px;
   margin: auto;
 }
