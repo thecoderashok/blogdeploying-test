@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Logo from "../../public/Tasks-Logo.svg"
 import style from "../../styles/Header.module.css"
 
+const title = "Tasks";
 
 export default function Header() {
     return (
@@ -11,7 +12,7 @@ export default function Header() {
            <div className={style.navBar}>
            <Link href="/" passHref>
            <div className={style.logoContainer}>
-               <Image className={style.Logo} src={Logo} width={65} height={1} />
+               <Image className={style.Logo} src={Logo} width={65} height={1} alt={title} />
                <div className={style.logoName}>
                    <h1>Tasks</h1>
                    <span>To-Do Lists & Reminnders</span>
