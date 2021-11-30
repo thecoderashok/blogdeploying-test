@@ -1,6 +1,4 @@
-
 import Link from 'next/link'
-
 // import Layout, { siteTitle } from '../components/layout'
 // import Date from '../components/date'
 import styles from '../styles/Home.module.css'
@@ -49,8 +47,11 @@ export default function Home({ allPostsData, designPosts, engineeringPosts}) {
               <span className={styles.postReadtime}>{readtime}</span>
             </div>
           </div>
+          
         </div>
+        
       </Link>
+      <Link href="/blog/Design"><button>see all</button></Link>
     </li>
       ))}
 

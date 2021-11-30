@@ -21,7 +21,7 @@ export default function Header() {
            </Link>
            <nav className={style.navContainer}>
                
-                  <li className={style.navItem}><Link href="/design" passHref><a>Blog</a></Link></li>
+                  <li className={style.navItem}><Link href="/blog" passHref><a>Blog</a></Link></li>
                   <li className={style.navItem}><Link href="/" passHref><a>Website</a></Link></li>
                   <li className={style.navItem}><Link href="/About" passHref><a>About</a></Link></li>
                   <li className={style.navItem}><Link href="/Contact" passHref><a>Contact</a></Link></li>
