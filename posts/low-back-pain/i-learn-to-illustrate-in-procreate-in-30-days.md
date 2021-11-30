@@ -1,7 +1,7 @@
 ---
 title: 'How I learned to Illustrate in Procreate in 30 Days'
 description: Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-category: productivity
+category: low-back-pain
 tags: Design System
 date: AUG 19 2020
 readtime: 3 MIN READ
