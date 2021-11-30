@@ -1,7 +1,7 @@
 ---
 title: 'Task App VS Apple reminder'
 description: Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-category: design
+category: design-post
 tags: New Features
 date: AUG 19 2020
 readtime: 3 MIN READ
