@@ -1,8 +1,7 @@
 ---
-title: 'How I learned to Illustrate in Procreate in 30 Days'
-description: Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+title: How I learned to Illustrate in Procreate in 30 Days
+description: Amet minim mollit non deserunt ullamco est sit aliqua, dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
 category: design
-tags: Design System
 date: AUG 19 2020
 readtime: 3 MIN READ
 coverimage: '/Images/posts/coverImage.png'
@@ -10,8 +9,9 @@ author: Mustafa Yusuf
 authorBio: Indie iOS/macOS Developer
 authorImage: '/Images/posts/mustafa.png'
 authorDescription: Day before yesterday, I received a call for helping out a mutual connection with their react native app for iOS. I have never worked on react native. 
----
+tags: "one two"
 
+---
 
 # Call to Action: The Ultimate Servival guide
 
