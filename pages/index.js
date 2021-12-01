@@ -12,12 +12,14 @@ export default function Home({ allPostsData, designPosts, productivityPosts}) {
    
     <div>
       <section className={styles.postSection}>
-      <h1 className={styles.postSectionTitle}>Recent</h1>
+      <div className={styles.post_section_header}>
+        <h1 className={styles.postSectionTitle}>Recent</h1>
+      </div>
       {allPostsData.map(({ id, category,date,tags, description, title, readtime, coverimage }) => (
        <li key={category}>
             <Link href="/[category]/[id]" as={`/${category}/${id}`} passHref>
                <div className={styles.postContainer}>
-            <div className="postbox__postDetails">
+            <div className={styles.postbox__postDetails}>
                 <h2 className={styles.postTitle}>{title}</h2>
                 <p className={styles.postDescription}>{description}</p>
                 <div className={styles.postTag}>{tags}</div>
@@ -37,13 +39,15 @@ export default function Home({ allPostsData, designPosts, productivityPosts}) {
     </section>
 
       <section className={styles.postSection}>
-      <h1 className={styles.postSectionTitle}>Design</h1>
-      <Link href="/blog/Design" passHref><a className={styles.seeall_btn}>See all</a></Link>
+      <div className={styles.post_section_header}>
+        <h1 className={styles.postSectionTitle}>Design</h1>
+        <Link href="/blog/Design" passHref><a className={styles.seeall_btn}>See all</a></Link>
+      </div>
       {designPosts.map(({ id, category,date, tags, description, title, readtime, coverimage }) => (
        <li key={category}>
             <Link href="/[category]/[id]" as={`/${category}/${id}`} passHref>
             <div className={styles.postContainer}>
-            <div className="postbox__postDetails">
+            <div className={styles.postbox__postDetails}>
                 <h2 className={styles.postTitle}>{title}</h2>
                 <p className={styles.postDescription}>{description}</p>
                 <div className={styles.postTag}>{tags}</div>
@@ -66,14 +70,16 @@ export default function Home({ allPostsData, designPosts, productivityPosts}) {
 
 
       <section className={styles.postSection}>
-      <h1 className={styles.postSectionTitle}>Productivity</h1>
-      <Link href="/blog/Productivity" passHref><a className={styles.seeall_btn}>See all</a></Link>
+      <div className={styles.post_section_header}>
+        <h1 className={styles.postSectionTitle}>Productivity</h1>
+        <Link href="/blog/Productivity" passHref><a className={styles.seeall_btn}>See all</a></Link>
+      </div>
 
       {productivityPosts.map(({ id, category,date, tags, description, title, readtime, coverimage }) => (
        <li key={id}>
             <Link href="/[category]/[id]" as={`/${category}/${id}`} passHref>
             <div className={styles.postContainer}>
-            <div className="postbox__postDetails">
+            <div className={styles.postbox__postDetails}>
                 <h2 className={styles.postTitle}>{title}</h2>
                 <p className={styles.postDescription}>{description}</p>
                 <div className={styles.postTag}>{tags}</div>
