@@ -296,4 +296,84 @@
    
     
   }
+
+  @media screen and (max-width: 640px) {
+    .postSectionTitle{
+      font-size: 36px;
+    }
+    .seeall_btn{
+      font-size: 20px;
+    }
+    .postTitle{
+      font-size: 36px;
+    }
+    .postDescription{
+      font-size: 20px;
+    }
+    .postTag{
+      font-size: 20px;
+    }
+    .postdate, .postReadtime{
+      font-size: 15px;
+    }
+    
+  }
+  @media screen and (max-width: 570px) {
+    .postSectionTitle{
+      font-size: 28px;
+    }
+    .seeall_btn{
+      font-size: 20px;
+    }
+    .postTitle{
+      font-size: 28px;
+    }
+    .postDescription{
+      font-size: 17px;
+    }
+    .postTag{
+      font-size: 17px;
+    }
+    
+    
+  }
+  @media screen and (max-width: 453px) {
+    .postSectionTitle{
+      font-size: 23px;
+    }
+    .seeall_btn{
+      font-size: 15px;
+    }
+    .postTitle{
+      font-size: 25px;
+    }
+    .postDescription{
+      font-size: 15px;
+    }
+    .postTag{
+      font-size: 15px;
+    }
+    
+    
+  }
+  
+  @media screen and (max-width: 396px) {
+    .postSectionTitle{
+      font-size: 20px;
+    }
+    .seeall_btn{
+      font-size: 15px;
+    }
+    .postTitle{
+      font-size: 22px;
+    }
+    .postDescription{
+      font-size: 13px;
+    }
+    .postTag{
+      font-size: 13px;
+    }
+    
+    
+  }
   
