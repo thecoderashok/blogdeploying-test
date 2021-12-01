@@ -48,3 +48,10 @@ article p{
 section{
   margin: auto;
 }
+
+@media screen and (max-width: 768px) {
+  hr{
+    min-width: 100%;
+  }
+  
+}

@@ -44,7 +44,7 @@ export default function Home({ allPostsData, designPosts, productivityPosts}) {
         <Link href="/blog/Design" passHref><a className={styles.seeall_btn}>See all</a></Link>
       </div>
       {designPosts.map(({ id, category,date, tags, description, title, readtime, coverimage }) => (
-       <li key={category}>
+       <li key={id}>
             <Link href="/[category]/[id]" as={`/${category}/${id}`} passHref>
             <div className={styles.postContainer}>
             <div className={styles.postbox__postDetails}>

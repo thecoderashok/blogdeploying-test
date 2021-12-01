@@ -20,6 +20,9 @@ export default function Post({ postData}) {
           <h1 className={styles.postContentTitle}>{postData.title}</h1>
           <p className={styles.postContentDescription}>{postData.description}</p>
           <div className={styles.postTag}>{postData.tags}</div>
+          <div className={styles.post_thumnail}>
+              <img className={styles.postcontentCover_image} src={postData.coverimage} alt={postData.title} />
+          </div>
           <div className={styles.postDateandTime}>
               <span className={styles.postdate}>{postData.date}</span>
               <span className={styles.postReadtime}>{postData.readtime}</span>
@@ -31,7 +34,9 @@ export default function Post({ postData}) {
 
         {/* Author details  */}
         <div className={styles.author_Details_Container}>
-          <h3 className={styles.author_container_title}>Author:</h3>
+         <div className={styles.author_header}>
+           <h3 className={styles.author_container_title}>Author:</h3>
+         </div>
             <div className={styles.authorCard}>
             <img className={styles.author_image} src={postData.authorImage} alt="" />
               <div className={styles.author_card_texts}>
