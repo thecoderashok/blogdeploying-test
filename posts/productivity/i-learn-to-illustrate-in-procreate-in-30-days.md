@@ -5,7 +5,7 @@ category: productivity
 tags: Design System
 date: AUG 19 2020
 readtime: 3 MIN READ
-cover_image: /posts/mustafa.png
+coverimage: '/Images/posts/coverImage.png'
 author: Mustafa Yusuf
 authorBio: Indie iOS/macOS Developer
 authorImage: '/Images/posts/mustafa.png'
