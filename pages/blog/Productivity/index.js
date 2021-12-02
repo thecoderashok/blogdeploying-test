@@ -9,12 +9,12 @@ export default function BlogPage({ productivityPosts}){
     return (
       <div>
           <Head>
-              <title>Engineering</title>
+              <title>Productivity</title>
           </Head>
           <section className={styles.postSection}>
       <h1 className={styles.postSectionTitle}>Productivity</h1>
       {productivityPosts.map(({ id, category,date, tags, description, title, readtime, coverimage }) => (
-       <li key={category}>
+       <li key={id}>
             <Link href="/[category]/[id]" as={`/${category}/${id}`} passHref>
             <div className={styles.postContainer}>
             <div className={styles.postbox__postDetails}>

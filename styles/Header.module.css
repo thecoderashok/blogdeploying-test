@@ -13,7 +13,7 @@
   .navBar{
       position: relative;
       max-width: 1400px;
-      width: 100%;
+      width: 95%;
   }
   
   .logoContainer{
@@ -53,10 +53,25 @@
       margin: 20px;
       font-size: 22px;
   }
+  .MenuIcon{
+      position: absolute;
+      right: 0;
+      display: none;
+      top: 50%;
+      transform: translate(0%, -50%);
+  }
 
   @media screen and (max-width: 768px) {
       .navContainer{
           display: none;
+      }
+
+      .navBar{
+          width: 90%;
+      }
+
+      .MenuIcon{
+          display: block;
       }
       
   }

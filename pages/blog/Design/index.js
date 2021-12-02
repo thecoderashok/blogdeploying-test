@@ -18,7 +18,7 @@ export default function BlogPage({designPosts}){
          <li key={id}>
               <Link href="/[category]/[id]" as={`/${category}/${id}`} passHref>
               <div className={styles.postContainer}>
-            <div className="postbox__postDetails">
+            <div className={styles.postbox__postDetails}>
                 <h2 className={styles.postTitle}>{title}</h2>
                 <p className={styles.postDescription}>{description}</p>
                 <div className={styles.postTag}>{tags}</div>

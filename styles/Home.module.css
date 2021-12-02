@@ -8,7 +8,7 @@
     height: auto;
     padding: 5% 0;
     display: flex;
-    max-width: 1400px;
+    max-width: 1420px;
     flex-direction: column;
     align-items: center;
     margin-top: 2%;
@@ -19,7 +19,7 @@
     display: flex;
     position: relative;
     justify-content: space-between;
-    width: 100%;
+    width: 93%;
     align-items: center;
     margin-bottom: 2%;
 
@@ -42,11 +42,11 @@
   
   .postContainer{
     position: relative;
-    width: 100%;
+    width: 95%;
     height: auto;
     padding: 1.5% 2%;
     background: rgb(255, 255, 255);
-    margin: 1% 0;
+    margin: 1% auto;
     border-radius: 28px;
     display: flex;
     justify-content: space-between;
@@ -73,13 +73,28 @@
   }
   
   .postTitle{
+    position: relative;
     font-size: 40px;
+    width: 93%;
+  }
+
+  @media screen and (min-width: 769px) {
+    .postTitle{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1 !important;
+      -webkit-box-orient: vertical;
+    }
+    
   }
 
   .postDescription{
+    position: relative;
     width: 90%;
     font-size: 20px;
     color: rgb(102, 102, 102);
+    
   }
   
   .postTag{
@@ -253,6 +268,101 @@
   }
 
 
+  @media screen and (max-width: 1492px) {
+    .postSectionTitle{
+      font-size: 35px;
+    }
+
+    .seeall_btn{
+      font-size: 20px;
+    }
+    .postTitle{
+      font-size: 30px;
+    }
+  
+    .postDescription{
+      font-size: 17px;
+    }
+
+    .postTag{
+      font-size: 15px;
+    }
+
+    .postdate, .postReadtime{
+      font-size: 15px;
+    }
+    
+  }
+  @media screen and (max-width: 1063px) {
+    .postSectionTitle{
+      font-size: 28px;
+    }
+
+    .seeall_btn{
+      font-size: 17px;
+    }
+    .postTitle{
+      font-size: 25px;
+    }
+  
+    .postDescription{
+      font-size: 15px;
+    }
+
+    .postTag{
+      font-size: 13px;
+    }
+
+    .postdate, .postReadtime{
+      font-size: 13px;
+    }
+    
+  }
+  @media screen and (max-width: 918px) {
+    .postSectionTitle{
+      font-size: 25px;
+    }
+
+    .seeall_btn{
+      font-size: 15px;
+    }
+    .postTitle{
+      font-size: 22px;
+    }
+  
+    .postDescription{
+      font-size: 12px;
+    }
+
+    .postTag{
+      font-size: 10px;
+    }
+
+    .postdate, .postReadtime{
+      font-size: 10px;
+    }
+    
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -334,8 +444,8 @@
     }
 
     .postdiv p{
-      line-height: 1.8;
-      font-size: 22px;
+      line-height: 1.7;
+      font-size: 20px;
     }
 
     .author_Details_Container{
@@ -391,6 +501,40 @@
       font-size: 15px;
     }
 
+
+    /* separate  */
+    .postContentTitle{
+      font-size: 30px;
+    }
+  
+    .postContentDescription{
+      font-size: 17px;
+    }
+
+    .postdiv p{
+      font-size: 18px;
+    }
+
+    
+    .author_container_title{
+      font-size: 25px;
+    }
+
+
+    .author_Details_Container p,  .author_about{
+      font-size: 16px;
+    }
+
+    .author_name{
+      font-size: 22px;
+      
+    }
+
+    .author_image{
+      width: 55px;
+      
+    }
+
    
     
   }
@@ -414,13 +558,15 @@
     .postTag{
       font-size: 17px;
     }
+
+    .postContentTitle{
+      font-size: 27px;
+    }
+  
     
     
   }
   @media screen and (max-width: 453px) {
-    .postSectionTitle{
-      font-size: 25px;
-    }
     .seeall_btn{
       font-size: 15px;
     }
@@ -433,15 +579,42 @@
     .postTag{
       font-size: 15px;
     }
+
+    .postContentTitle{
+      font-size: 25px;
+    }
+
+    .postContentDescription{
+      font-size: 15px;
+    }
+
+    .author_container_title{
+      font-size: 20px;
+    }
+
+
+    .author_Details_Container p,  .author_about{
+      font-size: 13px;
+    }
+
+    .author_name{
+      font-size: 18px;
+      
+    }
+
     
-    
+    .author_image{
+      width: 40px;
+      margin-top: 1.3%;
+    }
+  
   }
   
   @media screen and (max-width: 396px) {
-   
-    .seeall_btn{
-      font-size: 15px;
+    .postSectionTitle{
+      font-size: 26px;
     }
+   
     .postTitle{
       font-size: 22px;
     }
@@ -455,6 +628,35 @@
     .postdate, .postReadtime{
       font-size: 12px;
     }
+
+    .postdiv p{
+      font-size: 15px;
+    }
+
+    .postContentTitle{
+      font-size: 25px;
+    }
+
+    .postContentDescription{
+      font-size: 15px;
+    }
+
+    .author_container_title{
+      font-size: 20px;
+    }
+
+
+    .author_Details_Container p,  .author_about{
+      font-size: 12px;
+    }
+
+    .author_name{
+      font-size: 17px;
+      
+    }
+
+   
+    
     
 
   }

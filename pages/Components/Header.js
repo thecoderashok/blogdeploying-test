@@ -1,12 +1,24 @@
 import React from 'react'
+import { useRouter } from "next/router";
+import MenuIcon from '@mui/icons-material/Menu';
 import Image from 'next/image'
 import Link from 'next/link'
 import Logo from "../../public/Logo.svg"
 import style from "../../styles/Header.module.css"
 
+
+
 const title = "Tasks";
 
 export default function Header() {
+
+    const router = useRouter();
+   
+
+        // const menuOpen = () => {
+        //     console.log(nav)
+        // }
+    
     return (
         <header className={style.header}>
            <div className={style.navBar}>
@@ -19,12 +31,13 @@ export default function Header() {
                </div>
            </div>
            </Link>
-           <nav className={style.navContainer}>
+           <nav className={style.navContainer} id="nav">
                   <li className={style.navItem}><Link href="/blog" passHref><a>Blog</a></Link></li>
                   <li className={style.navItem}><Link href="/" passHref><a>Website</a></Link></li>
                   <li className={style.navItem}><Link href="/About" passHref><a>About</a></Link></li>
                   <li className={style.navItem}><Link href="/Contact" passHref><a>Contact</a></Link></li>
            </nav>
+                  <span className={style.MenuIcon} onClick={() => setNav}><MenuIcon/></span>
            </div>
         </header>
     )
