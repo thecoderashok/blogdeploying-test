@@ -4,13 +4,15 @@ import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import { getSortedPostsData, getDesignPosts, getProductivityPosts} from '../lib/post'
 
-export default function Home({ allPostsData, designPosts, productivityPosts}) {
+export default function Home({ allPostsData, designPosts, productivityPosts }) {
   // Delcare what category should be shown
   // const [viewCategory, setCategory] = useState('all');
 
   return (
    
     <div>
+
+
       <section className={styles.postSection}>
       <div className={styles.post_section_header}>
         <h1 className={styles.postSectionTitle}>Recent</h1>
@@ -101,6 +103,8 @@ export default function Home({ allPostsData, designPosts, productivityPosts}) {
       </div>
   )
 }
+
+
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()

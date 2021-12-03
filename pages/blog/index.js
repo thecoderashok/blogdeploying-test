@@ -12,7 +12,7 @@ export default function BlogPage({allPostsData}){
           <Head>
               <title>Blog</title>
           </Head>
-        <section className={styles.postSection}>
+        {/* <section className={styles.postSection}>
         <h1 className={styles.postSectionTitle}>All Posts</h1>
         {allPostsData.map(({ id, category,date, tags, description, title, readtime }) => (
          <li key={id}>
@@ -32,7 +32,7 @@ export default function BlogPage({allPostsData}){
         </Link>
       </li>
         ))}
-      </section>
+      </section> */}
         </div>
     )
   }

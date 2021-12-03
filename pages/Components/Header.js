@@ -1,10 +1,10 @@
-import React from 'react'
-import { useRouter } from "next/router";
-import MenuIcon from '@mui/icons-material/Menu';
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Logo from "../../public/Logo.svg"
 import style from "../../styles/Header.module.css"
+import { FiMenu } from 'react-icons/fi';
+import { CgClose } from 'react-icons/cg';
 
 
 
@@ -12,12 +12,9 @@ const title = "Tasks";
 
 export default function Header() {
 
-    const router = useRouter();
+    const [isOpen, setIsOpen] = useState(false);
    
 
-        // const menuOpen = () => {
-        //     console.log(nav)
-        // }
     
     return (
         <header className={style.header}>
@@ -31,13 +28,15 @@ export default function Header() {
                </div>
            </div>
            </Link>
-           <nav className={style.navContainer} id="nav">
+           <nav className={isOpen === false ? style.navContainer: style.navContainer + ' ' + style.active} >
+               <span className={style.CloseMenuIcon} onClick={() => setIsOpen(!isOpen)}><CgClose size="2rem" color="black"/></span>
+
                   <li className={style.navItem}><Link href="/blog" passHref><a>Blog</a></Link></li>
                   <li className={style.navItem}><Link href="/" passHref><a>Website</a></Link></li>
                   <li className={style.navItem}><Link href="/About" passHref><a>About</a></Link></li>
                   <li className={style.navItem}><Link href="/Contact" passHref><a>Contact</a></Link></li>
            </nav>
-                  <span className={style.MenuIcon} onClick={() => setNav}><MenuIcon/></span>
+                  <span className={style.MenuIcon} onClick={() => setIsOpen(!isOpen)}><FiMenu size="2rem" color="black"/></span>
            </div>
         </header>
     )
