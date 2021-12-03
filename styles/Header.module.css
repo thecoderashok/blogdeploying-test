@@ -71,7 +71,7 @@
           height: 100vh;
           z-index: 100;
           flex-direction: column;
-          background: rgb(233, 233, 233);
+          background: #F5F5F7;
           width: 0;
           left: 0;
           transition: all .3s;

@@ -1,6 +1,7 @@
 import Head from 'next/head'
 // import Layout from '../../components/layout'
 // import Date from '../../components/date'
+import PostFooter from '../Components/PostFooter'
 import styles from '../../styles/Home.module.css'
 import { getAllPostIds, getPostData } from '../../lib/post'
 
@@ -20,9 +21,9 @@ export default function Post({ postData}) {
           <h1 className={styles.postContentTitle}>{postData.title}</h1>
           <p className={styles.postContentDescription}>{postData.description}</p>
           <div className={styles.postTag}>{postData.tags}</div>
-          <div className={styles.post_thumnail}>
+          {/* <div className={styles.post_thumnail}>
               <img className={styles.postcontentCover_image} src={postData.coverimage} alt={postData.title} />
-          </div>
+          </div> */}
           <div className={styles.postDateandTime}>
               <span className={styles.postdate}>{postData.date}</span>
               <span className={styles.postReadtime}>{postData.readtime}</span>
@@ -49,6 +50,7 @@ export default function Post({ postData}) {
             </div>
         </div>
    </div>
+   <PostFooter />
    </>
   )
 }

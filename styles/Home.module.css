@@ -15,6 +15,14 @@
     
   }
 
+  
+@media only screen and (min-width: 1900px) {
+  .postSection{
+      padding: 90px 0;
+  }
+}
+
+
   .post_section_header{
     display: flex;
     position: relative;
@@ -369,6 +377,13 @@
   /* Responsiveness  */
 
   @media screen and (max-width: 768px) {
+    .postSectionTitle{
+      font-size: 43px;
+    }
+
+    .seeall_btn{
+      font-size: 30px;
+    }
     .postContainer{
       width: 90%;
       flex-direction: column-reverse;

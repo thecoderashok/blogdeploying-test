@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import Header from "../pages/Components/Header";
 
+
 function MyApp({ Component, pageProps }){
   return (
     <>
@@ -8,6 +9,7 @@ function MyApp({ Component, pageProps }){
     <main>
       <Component {...pageProps} />
     </main>
+   
     </>
   )
 }
