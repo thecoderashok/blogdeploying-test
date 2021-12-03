@@ -5,13 +5,13 @@ import React from 'react';
 import Footer from './Components/Footer';
 import styles from '../styles/Home.module.css'
 import { BsArrowRightCircle } from 'react-icons/bs';
-import { getSortedPostsData, getDesignPosts, getProductivityPosts} from '../lib/post'
+import { getSortedPostsData} from '../lib/post'
 
-export default function Home({ allPostsData, designPosts, productivityPosts }) {
+export default function Home({ allPostsData}) {
   // Delcare what category should be shown
   const [viewCategory, setCategory] = React.useState();
 
-  console.log(allPostsData.filter(allPostsData => allPostsData.category === 'design'));
+  // console.log(allPostsData.filter(allPostsData => allPostsData.category === 'design'));
 
   return (
    
@@ -81,7 +81,7 @@ export default function Home({ allPostsData, designPosts, productivityPosts }) {
       <section className={styles.postSection}>
       <div className={styles.post_section_header}>
         <h1 className={styles.postSectionTitle}>Productivity</h1>
-        <Link href="/blog/Design" passHref><a className={styles.seeall_btn}>See all <BsArrowRightCircle/></a></Link>
+        <Link href="/blog/Productivity" passHref><a className={styles.seeall_btn}>See all <BsArrowRightCircle/></a></Link>
        
       </div>
       {allPostsData.filter(allPostsData => allPostsData.category === 'productivity').map(({ id, category,date,tags, description, title, readtime, coverimage }) => (
@@ -120,13 +120,11 @@ export default function Home({ allPostsData, designPosts, productivityPosts }) {
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
-  const designPosts = getDesignPosts()
-  const productivityPosts = getProductivityPosts()
+  
   return {
     props: {
       allPostsData,
-      designPosts,
-      productivityPosts
+      
     }
   }
 }
