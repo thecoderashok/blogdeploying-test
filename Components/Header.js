@@ -23,9 +23,10 @@ export default function Header() {
            <Link href="/" passHref>
            <div className={style.logoContainer}>
                <Image className={style.Logo} src={Logo} width={61} height={1} alt={title} />
+               <img src={Logo} alt="" />
                <div className={style.logoName}>
                    <h1 className={style.logo_title}>Tasks</h1>
-                   <span>To-Do Lists & Reminnders</span>
+                   <span className={style.logo_subtitle}>To-Do Lists & Reminnders</span>
                </div>
            </div>
            </Link>

@@ -18,13 +18,13 @@ export default function Post({ postData}) {
       <div className={styles.postheader}>
           <h1 className={styles.postContentTitle}>{postData.title}</h1>
           <p className={styles.postContentDescription}>{postData.description}</p>
-          <div className={styles.postTag}>{postData.tags}</div>
+          <div className={styles.postTag_post_view}>{postData.tags}</div>
           {/* <div className={styles.post_thumnail}>
               <img className={styles.postcontentCover_image} src={postData.coverimage} alt={postData.title} />
           </div> */}
           <div className={styles.postDateandTime}>
-              <span className={styles.postdate}>{postData.date}</span>
-              <span className={styles.postReadtime}>{postData.readtime}</span>
+              <span className={`${styles.postdate}, ${styles.span}`}>{postData.date}</span>
+              <span className={`${styles.postReadtime}, ${styles.span}`}>{postData.readtime}</span>
           </div>
           <hr/>
         </div>

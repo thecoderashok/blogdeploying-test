@@ -38,6 +38,21 @@
     display: grid;
     justify-content: center;
     place-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.footer_social_item:nth-child(1) :hover{
+    color: red;
+}
+.footer_social_item:nth-child(2) :hover{
+    color: rgb(89, 167, 255);
+}
+.footer_social_item:nth-child(3) :hover{
+    color: rgb(29, 153, 255);
+}
+.footer_social_item:nth-child(4) :hover{
+    color: rgb(78, 58, 255);
 }
 
 
@@ -53,4 +68,28 @@
     margin: 1.8%;
     font-size: 25px;
     color: rgb(85, 85, 85);
+}
+
+@media only screen and (max-width: 768px) {
+    .footer_social_item{
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+
+    .footer_link{
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 466px) {
+    .footer_social_item{
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    .footer_link{
+        font-size: 10px;
+    }
+
+    
 }

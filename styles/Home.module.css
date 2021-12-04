@@ -6,7 +6,7 @@
     position: relative;
     width: 100%;
     height: auto;
-    padding: 5% 0;
+    padding: 3% 0;
     display: flex;
     max-width: 1420px;
     flex-direction: column;
@@ -16,7 +16,7 @@
   }
 
   
-@media only screen and (min-width: 1900px) {
+@media only screen and (min-width: 2000px) {
   .postSection{
       padding: 90px 0;
   }
@@ -44,8 +44,10 @@
   .seeall_btn{
     position: relative;
     right: 0;
+    margin-top: 1%;
     font-size: 25px;
     color: rgb(144, 144, 144);
+    width: fit-content;
   }
   
   .postContainer{
@@ -116,11 +118,25 @@
     color: #fff;
     
   }
+  
 
   .postBottomContainer{
+    width: 100%;
     margin-top: 5%;
-    padding: 5px;
+    padding: 1% 0 ;
     
+  }
+
+ .span{
+    margin: 0 8%;
+    min-width: fit-content;
+    text-align: center;
+  }
+
+  .span_desktop{
+    width: 100%;
+    margin: 0 2%;
+    text-align: left;
   }
   
   .postdate{
@@ -129,7 +145,6 @@
   }
   .postReadtime{
     font-size: 18px;
-    margin: 0 30px;
     color: rgb(104, 104, 104);
   }
   
@@ -273,6 +288,17 @@
 
   .postcontentCover_image{
     width: 100%;
+  }
+
+  .postTag_post_view{
+    position: relative;
+    background: rgb(117, 75, 255);
+    padding: .8% 1.2%;
+    width: fit-content;
+    font-size: 20px;
+    border-radius: 320px;
+    text-align: center;
+    color: #fff;
   }
 
 
@@ -489,6 +515,18 @@
     .author_card_texts{
       margin-left: 2%;
     }
+
+    .postTag_post_view{
+      font-size: 15px;
+      padding: 1% 3%;
+    }
+
+    .postDateandTime{
+      margin-top: 3%;
+    }
+    .span, .span_desktop{
+      font-size: 12px;
+    }
   
    
     
@@ -550,6 +588,8 @@
       
     }
 
+
+
    
     
   }
@@ -576,6 +616,15 @@
 
     .postContentTitle{
       font-size: 27px;
+    }
+
+    .postTag_post_view{
+      font-size: 15px;
+      padding: 1.8% 3%;
+    }
+
+    .span, .span_desktop{
+      font-size: 12px;
     }
   
     
@@ -622,6 +671,8 @@
       width: 40px;
       margin-top: 1.3%;
     }
+
+  
   
   }
   
@@ -640,8 +691,8 @@
       font-size: 13px;
     }
 
-    .postdate, .postReadtime{
-      font-size: 12px;
+    .span, .span_desktop{
+      font-size: 10px;
     }
 
     .postdiv p{
@@ -668,6 +719,10 @@
     .author_name{
       font-size: 17px;
       
+    }
+    .postTag_post_view{
+      font-size: 12px;
+      padding: 1.8% 3%;
     }
 
    

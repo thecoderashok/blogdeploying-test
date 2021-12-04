@@ -4,11 +4,13 @@ import React from 'react';
 // import Date from '../components/date'
 import PostCard from '../Components/Postcard';
 import Footer from '../Components/Footer';
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.css';
 import { BsArrowRightCircle } from 'react-icons/bs';
-import { getSortedPostsData} from '../lib/post'
+import { getSortedPostsData} from '../lib/post';
 
 export default function Home({ allPostsData}) {
+  
+  
   
 
   return (
@@ -19,7 +21,8 @@ export default function Home({ allPostsData}) {
          </div>
           {allPostsData.map((post, index) => (
               <PostCard post={post} key={index}/>
-            )).slice(0, 1)}
+              
+            )).slice(0, 3)}
        </section>
 
 
@@ -27,7 +30,7 @@ export default function Home({ allPostsData}) {
        <section className={styles.postSection}>
          <div className={styles.post_section_header}>
             <h1 className={styles.postSectionTitle}>Design</h1>
-            <Link href="/blog/design" passHref><a className={styles.seeall_btn}>See all <BsArrowRightCircle/></a></Link>
+            <Link href="/blog/design" passHref><a className={styles.seeall_btn}>See all <BsArrowRightCircle style={{ marginBottom:'-2'}}/></a></Link>
         </div>
           {allPostsData.filter(allPostsData => allPostsData.category === 'design').map((post, index) => (
               <PostCard post={post} key={index}/>
@@ -39,7 +42,7 @@ export default function Home({ allPostsData}) {
        <section className={styles.postSection}>
          <div className={styles.post_section_header}>
             <h1 className={styles.postSectionTitle}>Productivity</h1>
-            <Link href="/blog/productivity" passHref><a className={styles.seeall_btn}>See all <BsArrowRightCircle/></a></Link>
+            <Link href="/blog/productivity" passHref><a className={styles.seeall_btn}>See all <BsArrowRightCircle style={{ marginBottom:'-2'}}/></a></Link>
         </div>
           {allPostsData.filter(allPostsData => allPostsData.category === 'productivity').map((post, index) => (
               <PostCard post={post} key={index}/>
