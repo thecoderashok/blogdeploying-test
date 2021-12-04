@@ -30,7 +30,7 @@ export default function Home({ allPostsData}) {
        <section className={styles.postSection}>
          <div className={styles.post_section_header}>
             <h1 className={styles.postSectionTitle}>Design</h1>
-            <Link href="/blog/design" passHref><a className={styles.seeall_btn}>See all <BsArrowRightCircle style={{ marginBottom:'-2'}}/></a></Link>
+            <Link href="/blog/Design" passHref><a className={styles.seeall_btn}>See all <BsArrowRightCircle style={{ marginBottom:'-2'}}/></a></Link>
         </div>
           {allPostsData.filter(allPostsData => allPostsData.category === 'design').map((post, index) => (
               <PostCard post={post} key={index}/>
@@ -42,7 +42,7 @@ export default function Home({ allPostsData}) {
        <section className={styles.postSection}>
          <div className={styles.post_section_header}>
             <h1 className={styles.postSectionTitle}>Productivity</h1>
-            <Link href="/blog/productivity" passHref><a className={styles.seeall_btn}>See all <BsArrowRightCircle style={{ marginBottom:'-2'}}/></a></Link>
+            <Link href="/blog/Productivity" passHref><a className={styles.seeall_btn}>See all <BsArrowRightCircle style={{ marginBottom:'-2'}}/></a></Link>
         </div>
           {allPostsData.filter(allPostsData => allPostsData.category === 'productivity').map((post, index) => (
               <PostCard post={post} key={index}/>
