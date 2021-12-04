@@ -2,16 +2,14 @@ import Link from 'next/link'
 import React from 'react';
 // import Layout, { siteTitle } from '../components/layout'
 // import Date from '../components/date'
-import PostCard from './Components/PostCard';
-import Footer from './Components/Footer';
+import PostCard from '../Components/Postcard';
+import Footer from '../Components/Footer';
 import styles from '../styles/Home.module.css'
 import { BsArrowRightCircle } from 'react-icons/bs';
 import { getSortedPostsData} from '../lib/post'
 
 export default function Home({ allPostsData}) {
   
-
-  // console.log(allPostsData.filter(allPostsData => allPostsData.category === 'design'));
 
   return (
       <>
@@ -36,7 +34,7 @@ export default function Home({ allPostsData}) {
             ))}
        </section>
 
-       
+
 
        <section className={styles.postSection}>
          <div className={styles.post_section_header}>

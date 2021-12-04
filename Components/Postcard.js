@@ -1,10 +1,11 @@
-import Link from "next/link"
-import styles from '../../styles/Home.module.css'
+import React from 'react'
+import Link from 'next/link'
+import styles from '../styles/Home.module.css'
 
-export default function Post({ post }) {
-    return (
-      <>
-        <Link href="/blog/[category]/[id]" as={`/blog/${post.category}/${post.id}`} passHref>
+function PostCard({ post }) {
+  return (
+    <div>
+      <Link href="/blog/[category]/[id]" as={`/blog/${post.category}/${post.id}`} passHref>
          <div className={styles.postContainer}>
                 <div className={styles.postbox__postDetails}>
                     <h2 className={styles.postTitle}>{post.title}</h2>
@@ -19,6 +20,9 @@ export default function Post({ post }) {
             <img className={styles.coverimage} src={post.coverimage} alt={post.title}/>
         </div>
       </Link>
-      </>
-    )
+    </div>
+  )
 }
+
+export default PostCard
+

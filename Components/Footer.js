@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link';
-import styles from '../../styles/Footer.module.css'
+import styles from '../styles/Footer.module.css'
 import { BsInstagram, BsTwitter } from 'react-icons/bs';
 import { ImLinkedin2, ImFacebook } from 'react-icons/im';
 

@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import Logo from "../../public/Logo.svg"
-import style from "../../styles/Header.module.css"
+import Logo from "../public/Logo.svg"
+import style from "../styles/Header.module.css"
 import { FiMenu } from 'react-icons/fi';
 import { CgClose } from 'react-icons/cg';
 

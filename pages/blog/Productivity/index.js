@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import styles from '../../../styles/Home.module.css'
-import PostCard from '../../Components/PostCard'
+import PostCard from '../../../Components/Postcard'
 import { getSortedPostsData } from '../../../lib/post'
 
 export default function Productivity({ allPostsData }){
