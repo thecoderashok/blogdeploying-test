@@ -9,7 +9,7 @@ author: Mustafa Yusuf
 authorBio: Indie iOS/macOS Developer
 authorImage: '/Images/posts/mustafa.png'
 authorDescription: Day before yesterday, I received a call for helping out a mutual connection with their react native app for iOS. I have never worked on react native. 
-tags: "one two"
+tags: Design Tool, Design
 
 ---
 

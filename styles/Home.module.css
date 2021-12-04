@@ -109,14 +109,29 @@
   
   .postTag{
     position: relative;
-    background: rgb(117, 75, 255);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    
+  }
+
+  .postTag div{
+    position: relative;
+    background: rgb(171, 68, 255);
     padding: .8% 1.2%;
     width: fit-content;
     font-size: 20px;
     border-radius: 320px;
     text-align: center;
     color: #fff;
-    
+    margin: 0 .5%;
+  }
+
+ 
+
+  .postTag div:nth-child(2){
+    background: rgb(3, 187, 110);
   }
   
 
@@ -291,14 +306,27 @@
   }
 
   .postTag_post_view{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .postTag_post_view div{
     position: relative;
-    background: rgb(117, 75, 255);
+    background: rgb(144, 75, 255);
     padding: .8% 1.2%;
     width: fit-content;
     font-size: 20px;
     border-radius: 320px;
     text-align: center;
     color: #fff;
+    margin: 0 .5%;
+  }
+
+  .postTag_post_view  div:nth-child(2){
+    background: rgb(3, 187, 110);
   }
 
 
@@ -516,7 +544,7 @@
       margin-left: 2%;
     }
 
-    .postTag_post_view{
+    .postTag_post_view div{
       font-size: 15px;
       padding: 1% 3%;
     }
@@ -618,7 +646,7 @@
       font-size: 27px;
     }
 
-    .postTag_post_view{
+    .postTag_post_view div{
       font-size: 15px;
       padding: 1.8% 3%;
     }
@@ -720,7 +748,7 @@
       font-size: 17px;
       
     }
-    .postTag_post_view{
+    .postTag_post_view div{
       font-size: 12px;
       padding: 1.8% 3%;
     }

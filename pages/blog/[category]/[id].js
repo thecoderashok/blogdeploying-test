@@ -6,6 +6,15 @@ import styles from '../../../styles/Home.module.css'
 import { getAllPostIds, getPostData } from '../../../lib/post'
 
 export default function Post({ postData}) {
+
+  const tag = (postData.tags).split(",");
+  // console.log((post.tags).split(","))
+
+  const tags = tag.map((item, index) => (
+    <div>{item}</div>
+  ))
+
+
   return (
   <>
       <Head>
@@ -18,7 +27,7 @@ export default function Post({ postData}) {
       <div className={styles.postheader}>
           <h1 className={styles.postContentTitle}>{postData.title}</h1>
           <p className={styles.postContentDescription}>{postData.description}</p>
-          <div className={styles.postTag_post_view}>{postData.tags}</div>
+          <div className={styles.postTag_post_view}>{tags}</div>
           {/* <div className={styles.post_thumnail}>
               <img className={styles.postcontentCover_image} src={postData.coverimage} alt={postData.title} />
           </div> */}

@@ -4,7 +4,16 @@ import styles from '../styles/Home.module.css'
 
 function PostCard({ post }) {
  
-  const tag = [(post.tags).split(",")];
+  const tag = (post.tags).split(",");
+  // console.log((post.tags).split(","))
+
+  const tags = tag.map((item, index) => (
+    <div>{item}</div>
+  ))
+
+
+
+  console.log(tags)
   
   return (
     <div>
@@ -14,9 +23,8 @@ function PostCard({ post }) {
                     <h2 className={styles.postTitle}>{post.title}</h2>
                     <p className={styles.postDescription}>{post.description}</p>
                     {/* <div className={styles.postTag}>{post.tags}</div> */}
-                    <li className={styles.postTag}>{tag}</li>
+                    <li className={styles.postTag}>{tags}</li>
 
-            
                 <div className={styles.postBottomContainer}>
                     <span className={`${styles.postdate}, ${styles.span_desktop}`}>{post.date}</span>
                     <span className={`${styles.postReadtime}, ${styles.span_desktop}`}>{post.readtime}</span>
