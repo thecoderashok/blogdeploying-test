@@ -11,7 +11,7 @@ export default function Post({ postData}) {
   // console.log((post.tags).split(","))
 
   const tags = tag.map((item, index) => (
-    <div>{item}</div>
+    <div key={index}>{item}</div>
   ))
 
 

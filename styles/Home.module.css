@@ -346,7 +346,7 @@
       font-size: 17px;
     }
 
-    .postTag{
+    .postTag div{
       font-size: 15px;
     }
 
@@ -371,7 +371,7 @@
       font-size: 15px;
     }
 
-    .postTag{
+    .postTag div{
       font-size: 13px;
     }
 
@@ -396,7 +396,7 @@
       font-size: 12px;
     }
 
-    .postTag{
+    .postTag div{
       font-size: 10px;
     }
 
@@ -478,7 +478,7 @@
       -webkit-line-clamp: 3 !important;
       -webkit-box-orient: vertical;
     }
-    .postTag{
+    .postTag div{
       padding: 2% 3%;
       font-size: 25px;
     }
@@ -575,7 +575,7 @@
     .postDescription{
       font-size: 20px;
     }
-    .postTag{
+    .postTag div{
       font-size: 20px;
     }
     .postdate, .postReadtime{
@@ -638,7 +638,7 @@
     .postDescription{
       font-size: 17px;
     }
-    .postTag{
+    .postTag div{
       font-size: 17px;
     }
 
@@ -668,7 +668,7 @@
     .postDescription{
       font-size: 15px;
     }
-    .postTag{
+    .postTag div{
       font-size: 15px;
     }
 
@@ -715,7 +715,7 @@
     .postDescription{
       font-size: 13px;
     }
-    .postTag{
+    .postTag div{
       font-size: 13px;
     }
 
