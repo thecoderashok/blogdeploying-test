@@ -5,15 +5,10 @@ import styles from '../styles/Home.module.css'
 function PostCard({ post }) {
  
   const tag = (post.tags).split(",");
-  // console.log((post.tags).split(","))
 
   const tags = tag.map((item, index) => (
-    <div>{item}</div>
+    <div key={index}>{item}</div>
   ))
-
-
-
-  console.log(tags)
   
   return (
     <div>

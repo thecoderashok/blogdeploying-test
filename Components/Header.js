@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Logo from "../public/Logo.svg"
+import logopng from "../public/Logo.png"
 import style from "../styles/Header.module.css"
 import { FiMenu } from 'react-icons/fi';
 import { CgClose } from 'react-icons/cg';
@@ -22,8 +23,8 @@ export default function Header() {
            <div className={style.navBar}>
            <Link href="/" passHref>
            <div className={style.logoContainer}>
-               <Image className={style.Logo} src={Logo} width={61} height={1} alt={title} />
-               <img src={Logo} alt="" />
+              <div className={style.logodiv}><Image className={style.Logo} src={Logo}  alt={title}  layout="responsive"/></div>
+               {/* <img src={logopng} alt="" /> */}
                <div className={style.logoName}>
                    <h1 className={style.logo_title}>Tasks</h1>
                    <span className={style.logo_subtitle}>To-Do Lists & Reminnders</span>

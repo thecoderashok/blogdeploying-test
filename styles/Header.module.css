@@ -22,9 +22,16 @@
       left: 0;
       height: 100%;
       width: auto;
+     
   }
-  .Logo{
+  /* .Logo{
       margin-bottom: 20px;
+  } */
+
+  .logodiv{
+      position: relative;
+      width: 62px;
+      display: grid;
   }
   
   .logoName{
@@ -126,6 +133,10 @@
     }
     .logo_subtitle{
         font-size: 12px;
+    }
+
+    .logodiv{
+        width: 50px;
     }
       
   }
