@@ -6,14 +6,11 @@ import styles from '../../../styles/Home.module.css'
 import { getAllPostIds, getPostData } from '../../../lib/post'
 
 export default function Post({ postData}) {
-
-  const tag = (postData.tags).split(",");
-  // console.log((post.tags).split(","))
+  const tag = (postData.tags);
 
   const tags = tag.map((item, index) => (
-    <div key={index}>{item}</div>
+    <li key={index} className={`"row", ${styles.tagItem}`}>{item}</li>
   ))
-
 
   return (
   <>
@@ -42,7 +39,7 @@ export default function Post({ postData}) {
 
         {/* Author details  */}
         <div className={styles.author_Details_Container}>
-         <div className={styles.author_header}>
+           <div className={styles.author_header}>
            <h3 className={styles.author_container_title}>Author:</h3>
          </div>
             <div className={styles.authorCard}>
@@ -50,7 +47,6 @@ export default function Post({ postData}) {
               <div className={styles.author_card_texts}>
                 <h3 className={styles.author_name}>{postData.author}</h3>
                 <span className={styles.author_about}>{postData.authorBio}</span>
-                
 
                 <p className={styles.author_description}>{postData.authorDescription}</p>
               </div>
@@ -71,7 +67,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const postData = await getPostData(params.category, params.id)
+  const postData = await getPostData( params.id)
   return {
     props: {
       postData

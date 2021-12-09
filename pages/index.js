@@ -9,12 +9,27 @@ import { BsArrowRightCircle } from 'react-icons/bs';
 import { getSortedPostsData} from '../lib/post';
 
 export default function Home({ allPostsData}) {
+
+
+  // get all categories 
+  const allcategory = (allPostsData.map(post => post.category));
+  // console.log(postall)
+
+
+  // Remove duplicate category - twice to show once
+  const SingleCategory = new Set(allcategory);
+
   
-  
+  // Set() TO convert Array for maping all items
+  const particularCategory = Array.from(SingleCategory);
+
   
 
+  
+  
   return (
       <>
+      
        <section className={styles.postSection}>
          <div className={styles.post_section_header}>
             <h1 className={styles.postSectionTitle}>Recent</h1>
@@ -25,30 +40,39 @@ export default function Home({ allPostsData}) {
             )).slice(0, 3)}
        </section>
 
+       {particularCategory.map((categoryItem, index) => (
+         
+          <section key={index} className={styles.postSection}>
+            <div className={styles.post_section_header} >
+              <h1 className={styles.postSectionTitle} style={{textTransform:"capitalize"}}>{categoryItem}</h1>
+              <Link href="/blog/[category]" as={`/blog/${categoryItem}`} passHref><a className={styles.seeall_btn}>See all <BsArrowRightCircle style={{ marginBottom:'-2'}}/></a></Link>
+            </div>
+
+            {allPostsData.filter(allPostsData => allPostsData.category === categoryItem).map((post, index) => (
+              <PostCard post={post} key={index}/>
+            )).slice(0, 3)}
+
+          </section>
+
+        ))}
+
+           {/* {allPostsData.filter(allPostsData => allPostsData.category === allset).map((post, index) => (
+              <PostCard post={post} key={index}/>
+            )).slice(0, 1)} */}
 
 
-       <section className={styles.postSection}>
+
+
+
+        {/* <section className={styles.postSection}>
          <div className={styles.post_section_header}>
             <h1 className={styles.postSectionTitle}>Design</h1>
-            <Link href="/blog/Design" passHref><a className={styles.seeall_btn}>See all <BsArrowRightCircle style={{ marginBottom:'-2'}}/></a></Link>
+            <Link href="/blog/design" passHref><a className={styles.seeall_btn}>See all <BsArrowRightCircle style={{ marginBottom:'-2'}}/></a></Link>
         </div>
           {allPostsData.filter(allPostsData => allPostsData.category === 'design').map((post, index) => (
               <PostCard post={post} key={index}/>
             ))}
-       </section>
-
-
-
-       <section className={styles.postSection}>
-         <div className={styles.post_section_header}>
-            <h1 className={styles.postSectionTitle}>Productivity</h1>
-            <Link href="/blog/Productivity" passHref><a className={styles.seeall_btn}>See all <BsArrowRightCircle style={{ marginBottom:'-2'}}/></a></Link>
-        </div>
-          {allPostsData.filter(allPostsData => allPostsData.category === 'productivity').map((post, index) => (
-              <PostCard post={post} key={index}/>
-            ))}
-       </section>
-
+       </section>  */}
 
           <Footer/>
       </>

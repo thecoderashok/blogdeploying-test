@@ -4,21 +4,22 @@ import styles from '../styles/Home.module.css'
 
 function PostCard({ post }) {
  
-  const tag = (post.tags).split(",");
+  const tag = (post.tags);
 
   const tags = tag.map((item, index) => (
-    <div key={index}>{item}</div>
+    <li key={index} className={`"row", ${styles.tagItem}`}>{item}</li>
   ))
-  
+
+
   return (
     <div>
-      <Link href="/blog/[category]/[id]" as={`/blog/${post.category}/${post.id}`} passHref>
+      <Link href="/blog/post/[id]" as={`/blog/post/${post.id}`} passHref>
          <div className={styles.postContainer}>
                 <div className={styles.postbox__postDetails}>
                     <h2 className={styles.postTitle}>{post.title}</h2>
                     <p className={styles.postDescription}>{post.description}</p>
-                    {/* <div className={styles.postTag}>{post.tags}</div> */}
-                    <li className={styles.postTag}>{tags}</li>
+                    
+                    <div className={styles.postTag}>{tags}</div>
 
                 <div className={styles.postBottomContainer}>
                     <span className={`${styles.postdate}, ${styles.span_desktop}`}>{post.date}</span>
@@ -33,5 +34,5 @@ function PostCard({ post }) {
   )
 }
 
-export default PostCard
+export default PostCard;
 

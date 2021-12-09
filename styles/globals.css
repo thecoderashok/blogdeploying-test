@@ -11,6 +11,13 @@ body {
     background:  #F5F5F7; 
 }
 
+/* html::-moz-selection { color: red} */
+*::selection { 
+  background-color: rgb(255, 135, 79); 
+  color: white;
+}
+
+
 a {
   color: inherit;
   text-decoration: none;

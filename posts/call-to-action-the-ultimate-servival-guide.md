@@ -1,9 +1,9 @@
 ---
-title: 'How I learned to Illustrate in Procreate in 30 Days'
+title: 'Call to Action: The Ultimate Survival guide'
 description: Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-category: productivity
-tags: Design System
-date: AUG 19 2020
+category: design
+tags: [New Features, Design]
+date: DEC 20 2021
 readtime: 3 MIN READ
 coverimage: '/Images/posts/coverImage.png'
 author: Mustafa Yusuf

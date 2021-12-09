@@ -1,9 +1,9 @@
 ---
-title: 'Task App VS Apple reminder'
+title: 'Engineering second post'
 description: Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-category: productivity
-tags: New Features
-date: AUG 20 2020
+category: engineering
+tags: [Engineering, Tech]
+date: DEC 20 2021
 readtime: 3 MIN READ
 coverimage: '/Images/posts/coverImage.png'
 author: Mustafa Yusuf
