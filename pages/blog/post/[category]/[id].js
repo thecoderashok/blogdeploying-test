@@ -1,9 +1,9 @@
 import Head from 'next/head'
 // import Layout from '../../components/layout'
 // import Date from '../../components/date'
-import PostFooter from '../../../Components/PostFooter'
-import styles from '../../../styles/Home.module.css'
-import { getAllPostIds, getPostData } from '../../../lib/post'
+import PostFooter from '../../../../Components/PostFooter'
+import styles from '../../../../styles/Home.module.css'
+import { getSortedPostsData, getPostData } from '../../../../lib/post'
 
 export default function Post({ postData}) {
   const tag = (postData.tags);
@@ -58,19 +58,29 @@ export default function Post({ postData}) {
   )
 }
 
+
 export async function getStaticPaths() {
-  const paths = getAllPostIds()
+  const allPostsData = getSortedPostsData()
+  const paths = allPostsData.map((file) => {
+    return{
+      params: {
+        category: file.category,
+        id: file.id
+      }
+    }
+  })
   return {
     paths,
     fallback: false
   }
 }
 
+
 export async function getStaticProps({ params }) {
-  const postData = await getPostData( params.id)
+  const postData = await getPostData( params.id);
   return {
     props: {
-      postData
-    }
-  }
+      postData,
+    },
+  };
 }
