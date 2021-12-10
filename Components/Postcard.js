@@ -13,7 +13,7 @@ function PostCard({ post }) {
 
   return (
     <div>
-      <Link href="/blog/post/[id]" as={`/blog/post/${post.id}`} passHref>
+      <Link href="/blog/post/[category]/[id]" as={`/blog/post/${post.category}/${post.id}`} passHref>
          <div className={styles.postContainer}>
                 <div className={styles.postbox__postDetails}>
                     <h2 className={styles.postTitle}>{post.title}</h2>
@@ -34,5 +34,5 @@ function PostCard({ post }) {
   )
 }
 
-export default PostCard;
+export default PostCard
 
