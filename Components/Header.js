@@ -8,9 +8,9 @@ import { FiMenu } from 'react-icons/fi';
 import { CgClose } from 'react-icons/cg';
 
 import dynamic from "next/dynamic";
-import styled from "@emotion/styled";
 
-const ThemeToggle = dynamic(() => import("../components/ThemeToggle"), {
+
+const ThemeToggle = dynamic(() => import("./ThemeToggle"), {
   ssr: false,
 });
 
