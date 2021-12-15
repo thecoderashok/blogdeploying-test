@@ -7,14 +7,14 @@ function PostCard({ post }) {
   const tag = (post.tags);
 
   const tags = tag.map((item, index) => (
-    <li key={index} className={`"row", ${styles.tagItem}`}>{item}</li>
+    <li key={index} className={`row, ${styles.tagItem}`}>{item}</li>
   ))
 
 
   return (
     <div>
       <Link href="/blog/post/[category]/[id]" as={`/blog/post/${post.category}/${post.id}`} passHref>
-         <div className={styles.postContainer}>
+         <div className={`${styles.postContainer} postcard`}>
                 <div className={styles.postbox__postDetails}>
                     <h2 className={styles.postTitle}>{post.title}</h2>
                     <p className={styles.postDescription}>{post.description}</p>

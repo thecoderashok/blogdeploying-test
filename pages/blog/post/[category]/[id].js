@@ -34,7 +34,7 @@ export default function Post({ postData}) {
           </div>
           <hr/>
         </div>
-        <article className={styles.postdiv} dangerouslySetInnerHTML={{ __html: postData.contentHtml }}/>
+        <div className={styles.postdiv} dangerouslySetInnerHTML={{ __html: postData.contentHtml }}/>
         <hr />
 
         {/* Author details  */}

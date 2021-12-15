@@ -8,24 +8,18 @@ import styles from '../styles/Home.module.css';
 import { BsArrowRightCircle } from 'react-icons/bs';
 import { getSortedPostsData} from '../lib/post';
 
-export default function Home({ allPostsData}) {
 
+export default function Home({ allPostsData}) {
 
   // get all categories 
   const allcategory = (allPostsData.map(post => post.category));
   // console.log(postall)
-
-
   // Remove duplicate category - twice to show once
   const SingleCategory = new Set(allcategory);
 
-  
   // Set() TO convert Array for maping all items
   const particularCategory = Array.from(SingleCategory);
 
-  
-
-  
   
   return (
       <>

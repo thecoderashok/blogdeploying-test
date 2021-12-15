@@ -55,14 +55,18 @@
     width: 95%;
     height: auto;
     padding: 1.5% 2%;
-    background: rgb(255, 255, 255);
     margin: 1% auto;
     border-radius: 28px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     cursor: pointer;
+    background: #fff;
     
+  }
+
+  body[data-theme="dark"] .postContainer{
+    background: #252525;
   }
 
   .postContainer .postbox__postDetails{

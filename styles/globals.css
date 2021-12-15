@@ -33,7 +33,31 @@ h1, h2, h3{
 }
 body{
   position: relative;
+  transition: .5s;
 }
+
+header{
+  transform: .5s;
+}
+
+body[data-theme="dark"]{
+  background: #1C1C1E;
+  color: rgb(240, 240, 240);
+}
+body[data-theme="dark"]  header{
+  background: #1C1C1E;
+}
+
+/* body[data-theme="dark"]  div{
+  background: #1C1C1E;
+} */
+/* body[data-theme="dark"] .postcard{
+  background: #252525;
+}
+
+.postcard {
+  background: rgb(255, 255, 255);
+} */
 
 hr{
   width: 70%;
